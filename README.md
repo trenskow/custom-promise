@@ -25,7 +25,7 @@ The constructor for `CustomPromise` takes no parameters, so you can customize yo
 
 # Example
 
-````JavaScript
+````javascript
 import CustomPromise from '@trenskow/custom-promise';
 import readline from 'readline';
 
@@ -52,7 +52,7 @@ class AskQuestion extends CustomPromise {
 
 Now you can use it like this.
 
-````JavaScript
+````javascript
 await new AskQuestion('What is your name?');
 ````
 
@@ -62,7 +62,7 @@ The above use case for this might be a little impractical, as you might as well 
 
 But a useful use case is when you want to provide promise capability on daisy chained APIs.
 
-````JavaScript
+````javascript
 import CustomPromise from '@trenskow/custom-promise';
 
 class DoIt extends CustomPromise {
@@ -98,7 +98,7 @@ class DoIt extends CustomPromise {
 
 This can be used like this.
 
-````JavaScript
+````javascript
 
 await new DoIt()
 	.take()
