@@ -65,7 +65,7 @@ But a useful use case is when you want to provide promise capability on daisy ch
 ````JavaScript
 import CustomPromise from '@trenskow/custom-promise';
 
-class DaisyChain extends CustomPromise {
+class DoIt extends CustomPromise {
 
 	constructor () {
 
@@ -81,7 +81,7 @@ class DaisyChain extends CustomPromise {
 
 	your() { return this; }
 
-	mamma() { return this; }
+	mama() { return this; }
 
 	out() { return this; }
 
@@ -100,15 +100,13 @@ This can be used like this.
 
 ````JavaScript
 
-const doit = new DaisyChain();
-
-	await doit
-		.take()
-		.your()
-		.mamma()
-		.out()
-		.all()
-		.night(); // Returns 'Baby, you\'re a full grown man!'
+await new DoIt()
+	.take()
+	.your()
+	.mama()
+	.out()
+	.all()
+	.night(); // Returns 'Baby, you\'re a full grown man!'
 
 ````
 
