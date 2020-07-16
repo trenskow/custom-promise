@@ -1,0 +1,26 @@
+{
+  "name": "@trenskow/custom-promise",
+  "version": "0.9.0",
+  "description": "A extendable class for making custom promises.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trenskow/custom-promise.git"
+  },
+  "keywords": [
+    "promise",
+    "custom"
+  ],
+  "author": "Kristian Trenskow <trenskow@me.com>",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/trenskow/custom-promise/issues"
+  },
+  "homepage": "https://github.com/trenskow/custom-promise#readme"
+}
