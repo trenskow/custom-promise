@@ -5,7 +5,7 @@ A small JavaScript library for creating custom promises.
 
 # Reason
 
-The promise specifications in JavaScript makes it hard to subclass `Promise` as the specifications does not allow for constructors that takes anything else but a function as a callback-
+The promise specifications in JavaScript makes it hard to subclass `Promise` as the specifications does not allow for constructors that takes anything else but a function as a callback.
 
 > [See the ECMA specifications for promises here](https://tc39.es/ecma262/#sec-newpromisecapability)
 
@@ -15,7 +15,9 @@ I've created this small class that follows the specifications for what *is* a pr
 
 # How to Use
 
-It's dead simple. You subclass `CustomPromise` and then you call either `this._resolve(value)` or `this._reject(error)` when the promise is done.
+It's dead simple!
+
+You subclass `CustomPromise` and then you call either `this._resolve(value)` or `this._reject(error)` when the promise is done.
 
 State and callback handling is handled under the hood.
 
@@ -39,7 +41,8 @@ class AskQuestion extends CustomPromise {
 		});
 
 		this._rl.question(question, (answer) => {
-			this._resolve(answer);
+			if (answer === '!') this._reject(new Error('User refused to answer!'))
+			else this._resolve(answer);
 		});
 
 	}
@@ -65,6 +68,7 @@ import CustomPromise from '@trenskow/custom-promise';
 class DaisyChain extends CustomPromise {
 
 	constructor () {
+
 		super()
 
 		setImmediate(() => {
@@ -108,7 +112,7 @@ const doit = new DaisyChain();
 
 ````
 
-This is not really possible with promises as they are implemented in ECMAScript, and therefore you cannot really create APIs like this – but with `CustomPromise` you can... 😉
+This is not really possible with promises as they are implemented in ECMAScript, and therefore you cannot really create APIs like this – but with `CustomPromise` you can..! 😉
 
 # License
 
