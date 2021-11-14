@@ -8,6 +8,10 @@ class CustomPromise {
 		this._finalizers = [];
 	}
 
+	_reset() {
+		this._state = 'pending';
+	}
+
 	_resolve(result) {
 		if (this._state !== 'pending') return;
 		this._state = 'fulfilled';
