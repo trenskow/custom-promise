@@ -1,5 +1,3 @@
-'use strict';
-
 class CustomPromise {
 
 	constructor() {
@@ -55,4 +53,4 @@ class CustomPromise {
 
 }
 
-exports = module.exports = CustomPromise;
+export default CustomPromise;
