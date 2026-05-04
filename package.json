@@ -1,6 +1,6 @@
 {
 	"name": "@trenskow/custom-promise",
-	"version": "0.13.19",
+	"version": "0.13.20",
 	"description": "A extendable class for making custom promises.",
 	"main": "index.js",
 	"type": "module",
